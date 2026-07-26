@@ -1,0 +1,1502 @@
+[
+{
+"ticker": "000001",
+"market": "SZ",
+"wsym": "sz000001"
+},
+{
+"ticker": "000002",
+"market": "SZ",
+"wsym": "sz000002"
+},
+{
+"ticker": "000063",
+"market": "SZ",
+"wsym": "sz000063"
+},
+{
+"ticker": "000100",
+"market": "SZ",
+"wsym": "sz000100"
+},
+{
+"ticker": "000157",
+"market": "SZ",
+"wsym": "sz000157"
+},
+{
+"ticker": "000166",
+"market": "SZ",
+"wsym": "sz000166"
+},
+{
+"ticker": "000301",
+"market": "SZ",
+"wsym": "sz000301"
+},
+{
+"ticker": "000333",
+"market": "SZ",
+"wsym": "sz000333"
+},
+{
+"ticker": "000338",
+"market": "SZ",
+"wsym": "sz000338"
+},
+{
+"ticker": "000408",
+"market": "SZ",
+"wsym": "sz000408"
+},
+{
+"ticker": "000425",
+"market": "SZ",
+"wsym": "sz000425"
+},
+{
+"ticker": "000538",
+"market": "SZ",
+"wsym": "sz000538"
+},
+{
+"ticker": "000568",
+"market": "SZ",
+"wsym": "sz000568"
+},
+{
+"ticker": "000596",
+"market": "SZ",
+"wsym": "sz000596"
+},
+{
+"ticker": "000617",
+"market": "SZ",
+"wsym": "sz000617"
+},
+{
+"ticker": "000625",
+"market": "SZ",
+"wsym": "sz000625"
+},
+{
+"ticker": "000630",
+"market": "SZ",
+"wsym": "sz000630"
+},
+{
+"ticker": "000651",
+"market": "SZ",
+"wsym": "sz000651"
+},
+{
+"ticker": "000657",
+"market": "SZ",
+"wsym": "sz000657"
+},
+{
+"ticker": "000708",
+"market": "SZ",
+"wsym": "sz000708"
+},
+{
+"ticker": "000725",
+"market": "SZ",
+"wsym": "sz000725"
+},
+{
+"ticker": "000768",
+"market": "SZ",
+"wsym": "sz000768"
+},
+{
+"ticker": "000776",
+"market": "SZ",
+"wsym": "sz000776"
+},
+{
+"ticker": "000792",
+"market": "SZ",
+"wsym": "sz000792"
+},
+{
+"ticker": "000807",
+"market": "SZ",
+"wsym": "sz000807"
+},
+{
+"ticker": "000858",
+"market": "SZ",
+"wsym": "sz000858"
+},
+{
+"ticker": "000895",
+"market": "SZ",
+"wsym": "sz000895"
+},
+{
+"ticker": "000938",
+"market": "SZ",
+"wsym": "sz000938"
+},
+{
+"ticker": "000963",
+"market": "SZ",
+"wsym": "sz000963"
+},
+{
+"ticker": "000975",
+"market": "SZ",
+"wsym": "sz000975"
+},
+{
+"ticker": "000977",
+"market": "SZ",
+"wsym": "sz000977"
+},
+{
+"ticker": "000988",
+"market": "SZ",
+"wsym": "sz000988"
+},
+{
+"ticker": "000999",
+"market": "SZ",
+"wsym": "sz000999"
+},
+{
+"ticker": "001280",
+"market": "SZ",
+"wsym": "sz001280"
+},
+{
+"ticker": "001391",
+"market": "SZ",
+"wsym": "sz001391"
+},
+{
+"ticker": "001965",
+"market": "SZ",
+"wsym": "sz001965"
+},
+{
+"ticker": "001979",
+"market": "SZ",
+"wsym": "sz001979"
+},
+{
+"ticker": "002001",
+"market": "SZ",
+"wsym": "sz002001"
+},
+{
+"ticker": "002027",
+"market": "SZ",
+"wsym": "sz002027"
+},
+{
+"ticker": "002028",
+"market": "SZ",
+"wsym": "sz002028"
+},
+{
+"ticker": "002049",
+"market": "SZ",
+"wsym": "sz002049"
+},
+{
+"ticker": "002050",
+"market": "SZ",
+"wsym": "sz002050"
+},
+{
+"ticker": "002074",
+"market": "SZ",
+"wsym": "sz002074"
+},
+{
+"ticker": "002142",
+"market": "SZ",
+"wsym": "sz002142"
+},
+{
+"ticker": "002179",
+"market": "SZ",
+"wsym": "sz002179"
+},
+{
+"ticker": "002202",
+"market": "SZ",
+"wsym": "sz002202"
+},
+{
+"ticker": "002230",
+"market": "SZ",
+"wsym": "sz002230"
+},
+{
+"ticker": "002236",
+"market": "SZ",
+"wsym": "sz002236"
+},
+{
+"ticker": "002241",
+"market": "SZ",
+"wsym": "sz002241"
+},
+{
+"ticker": "002304",
+"market": "SZ",
+"wsym": "sz002304"
+},
+{
+"ticker": "002311",
+"market": "SZ",
+"wsym": "sz002311"
+},
+{
+"ticker": "002352",
+"market": "SZ",
+"wsym": "sz002352"
+},
+{
+"ticker": "002353",
+"market": "SZ",
+"wsym": "sz002353"
+},
+{
+"ticker": "002371",
+"market": "SZ",
+"wsym": "sz002371"
+},
+{
+"ticker": "002384",
+"market": "SZ",
+"wsym": "sz002384"
+},
+{
+"ticker": "002415",
+"market": "SZ",
+"wsym": "sz002415"
+},
+{
+"ticker": "002422",
+"market": "SZ",
+"wsym": "sz002422"
+},
+{
+"ticker": "002460",
+"market": "SZ",
+"wsym": "sz002460"
+},
+{
+"ticker": "002463",
+"market": "SZ",
+"wsym": "sz002463"
+},
+{
+"ticker": "002466",
+"market": "SZ",
+"wsym": "sz002466"
+},
+{
+"ticker": "002475",
+"market": "SZ",
+"wsym": "sz002475"
+},
+{
+"ticker": "002493",
+"market": "SZ",
+"wsym": "sz002493"
+},
+{
+"ticker": "002532",
+"market": "SZ",
+"wsym": "sz002532"
+},
+{
+"ticker": "002558",
+"market": "SZ",
+"wsym": "sz002558"
+},
+{
+"ticker": "002594",
+"market": "SZ",
+"wsym": "sz002594"
+},
+{
+"ticker": "002600",
+"market": "SZ",
+"wsym": "sz002600"
+},
+{
+"ticker": "002602",
+"market": "SZ",
+"wsym": "sz002602"
+},
+{
+"ticker": "002625",
+"market": "SZ",
+"wsym": "sz002625"
+},
+{
+"ticker": "002648",
+"market": "SZ",
+"wsym": "sz002648"
+},
+{
+"ticker": "002709",
+"market": "SZ",
+"wsym": "sz002709"
+},
+{
+"ticker": "002714",
+"market": "SZ",
+"wsym": "sz002714"
+},
+{
+"ticker": "002736",
+"market": "SZ",
+"wsym": "sz002736"
+},
+{
+"ticker": "002837",
+"market": "SZ",
+"wsym": "sz002837"
+},
+{
+"ticker": "002916",
+"market": "SZ",
+"wsym": "sz002916"
+},
+{
+"ticker": "002920",
+"market": "SZ",
+"wsym": "sz002920"
+},
+{
+"ticker": "002938",
+"market": "SZ",
+"wsym": "sz002938"
+},
+{
+"ticker": "003816",
+"market": "SZ",
+"wsym": "sz003816"
+},
+{
+"ticker": "300014",
+"market": "SZ",
+"wsym": "sz300014"
+},
+{
+"ticker": "300015",
+"market": "SZ",
+"wsym": "sz300015"
+},
+{
+"ticker": "300033",
+"market": "SZ",
+"wsym": "sz300033"
+},
+{
+"ticker": "300059",
+"market": "SZ",
+"wsym": "sz300059"
+},
+{
+"ticker": "300122",
+"market": "SZ",
+"wsym": "sz300122"
+},
+{
+"ticker": "300124",
+"market": "SZ",
+"wsym": "sz300124"
+},
+{
+"ticker": "300251",
+"market": "SZ",
+"wsym": "sz300251"
+},
+{
+"ticker": "300274",
+"market": "SZ",
+"wsym": "sz300274"
+},
+{
+"ticker": "300308",
+"market": "SZ",
+"wsym": "sz300308"
+},
+{
+"ticker": "300316",
+"market": "SZ",
+"wsym": "sz300316"
+},
+{
+"ticker": "300394",
+"market": "SZ",
+"wsym": "sz300394"
+},
+{
+"ticker": "300408",
+"market": "SZ",
+"wsym": "sz300408"
+},
+{
+"ticker": "300413",
+"market": "SZ",
+"wsym": "sz300413"
+},
+{
+"ticker": "300418",
+"market": "SZ",
+"wsym": "sz300418"
+},
+{
+"ticker": "300433",
+"market": "SZ",
+"wsym": "sz300433"
+},
+{
+"ticker": "300442",
+"market": "SZ",
+"wsym": "sz300442"
+},
+{
+"ticker": "300450",
+"market": "SZ",
+"wsym": "sz300450"
+},
+{
+"ticker": "300476",
+"market": "SZ",
+"wsym": "sz300476"
+},
+{
+"ticker": "300498",
+"market": "SZ",
+"wsym": "sz300498"
+},
+{
+"ticker": "300502",
+"market": "SZ",
+"wsym": "sz300502"
+},
+{
+"ticker": "300628",
+"market": "SZ",
+"wsym": "sz300628"
+},
+{
+"ticker": "300661",
+"market": "SZ",
+"wsym": "sz300661"
+},
+{
+"ticker": "300750",
+"market": "SZ",
+"wsym": "sz300750"
+},
+{
+"ticker": "300760",
+"market": "SZ",
+"wsym": "sz300760"
+},
+{
+"ticker": "300803",
+"market": "SZ",
+"wsym": "sz300803"
+},
+{
+"ticker": "300832",
+"market": "SZ",
+"wsym": "sz300832"
+},
+{
+"ticker": "300866",
+"market": "SZ",
+"wsym": "sz300866"
+},
+{
+"ticker": "300896",
+"market": "SZ",
+"wsym": "sz300896"
+},
+{
+"ticker": "300999",
+"market": "SZ",
+"wsym": "sz300999"
+},
+{
+"ticker": "301165",
+"market": "SZ",
+"wsym": "sz301165"
+},
+{
+"ticker": "301236",
+"market": "SZ",
+"wsym": "sz301236"
+},
+{
+"ticker": "301269",
+"market": "SZ",
+"wsym": "sz301269"
+},
+{
+"ticker": "301308",
+"market": "SZ",
+"wsym": "sz301308"
+},
+{
+"ticker": "302132",
+"market": "SZ",
+"wsym": "sz302132"
+},
+{
+"ticker": "600000",
+"market": "SH",
+"wsym": "sh600000"
+},
+{
+"ticker": "600009",
+"market": "SH",
+"wsym": "sh600009"
+},
+{
+"ticker": "600010",
+"market": "SH",
+"wsym": "sh600010"
+},
+{
+"ticker": "600011",
+"market": "SH",
+"wsym": "sh600011"
+},
+{
+"ticker": "600015",
+"market": "SH",
+"wsym": "sh600015"
+},
+{
+"ticker": "600016",
+"market": "SH",
+"wsym": "sh600016"
+},
+{
+"ticker": "600018",
+"market": "SH",
+"wsym": "sh600018"
+},
+{
+"ticker": "600019",
+"market": "SH",
+"wsym": "sh600019"
+},
+{
+"ticker": "600023",
+"market": "SH",
+"wsym": "sh600023"
+},
+{
+"ticker": "600025",
+"market": "SH",
+"wsym": "sh600025"
+},
+{
+"ticker": "600026",
+"market": "SH",
+"wsym": "sh600026"
+},
+{
+"ticker": "600027",
+"market": "SH",
+"wsym": "sh600027"
+},
+{
+"ticker": "600028",
+"market": "SH",
+"wsym": "sh600028"
+},
+{
+"ticker": "600029",
+"market": "SH",
+"wsym": "sh600029"
+},
+{
+"ticker": "600030",
+"market": "SH",
+"wsym": "sh600030"
+},
+{
+"ticker": "600031",
+"market": "SH",
+"wsym": "sh600031"
+},
+{
+"ticker": "600036",
+"market": "SH",
+"wsym": "sh600036"
+},
+{
+"ticker": "600039",
+"market": "SH",
+"wsym": "sh600039"
+},
+{
+"ticker": "600048",
+"market": "SH",
+"wsym": "sh600048"
+},
+{
+"ticker": "600050",
+"market": "SH",
+"wsym": "sh600050"
+},
+{
+"ticker": "600061",
+"market": "SH",
+"wsym": "sh600061"
+},
+{
+"ticker": "600066",
+"market": "SH",
+"wsym": "sh600066"
+},
+{
+"ticker": "600085",
+"market": "SH",
+"wsym": "sh600085"
+},
+{
+"ticker": "600089",
+"market": "SH",
+"wsym": "sh600089"
+},
+{
+"ticker": "600104",
+"market": "SH",
+"wsym": "sh600104"
+},
+{
+"ticker": "600111",
+"market": "SH",
+"wsym": "sh600111"
+},
+{
+"ticker": "600115",
+"market": "SH",
+"wsym": "sh600115"
+},
+{
+"ticker": "600118",
+"market": "SH",
+"wsym": "sh600118"
+},
+{
+"ticker": "600150",
+"market": "SH",
+"wsym": "sh600150"
+},
+{
+"ticker": "600160",
+"market": "SH",
+"wsym": "sh600160"
+},
+{
+"ticker": "600176",
+"market": "SH",
+"wsym": "sh600176"
+},
+{
+"ticker": "600183",
+"market": "SH",
+"wsym": "sh600183"
+},
+{
+"ticker": "600188",
+"market": "SH",
+"wsym": "sh600188"
+},
+{
+"ticker": "600196",
+"market": "SH",
+"wsym": "sh600196"
+},
+{
+"ticker": "600219",
+"market": "SH",
+"wsym": "sh600219"
+},
+{
+"ticker": "600221",
+"market": "SH",
+"wsym": "sh600221"
+},
+{
+"ticker": "600233",
+"market": "SH",
+"wsym": "sh600233"
+},
+{
+"ticker": "600276",
+"market": "SH",
+"wsym": "sh600276"
+},
+{
+"ticker": "600309",
+"market": "SH",
+"wsym": "sh600309"
+},
+{
+"ticker": "600346",
+"market": "SH",
+"wsym": "sh600346"
+},
+{
+"ticker": "600362",
+"market": "SH",
+"wsym": "sh600362"
+},
+{
+"ticker": "600372",
+"market": "SH",
+"wsym": "sh600372"
+},
+{
+"ticker": "600406",
+"market": "SH",
+"wsym": "sh600406"
+},
+{
+"ticker": "600415",
+"market": "SH",
+"wsym": "sh600415"
+},
+{
+"ticker": "600426",
+"market": "SH",
+"wsym": "sh600426"
+},
+{
+"ticker": "600436",
+"market": "SH",
+"wsym": "sh600436"
+},
+{
+"ticker": "600438",
+"market": "SH",
+"wsym": "sh600438"
+},
+{
+"ticker": "600460",
+"market": "SH",
+"wsym": "sh600460"
+},
+{
+"ticker": "600482",
+"market": "SH",
+"wsym": "sh600482"
+},
+{
+"ticker": "600489",
+"market": "SH",
+"wsym": "sh600489"
+},
+{
+"ticker": "600515",
+"market": "SH",
+"wsym": "sh600515"
+},
+{
+"ticker": "600519",
+"market": "SH",
+"wsym": "sh600519"
+},
+{
+"ticker": "600522",
+"market": "SH",
+"wsym": "sh600522"
+},
+{
+"ticker": "600547",
+"market": "SH",
+"wsym": "sh600547"
+},
+{
+"ticker": "600549",
+"market": "SH",
+"wsym": "sh600549"
+},
+{
+"ticker": "600570",
+"market": "SH",
+"wsym": "sh600570"
+},
+{
+"ticker": "600584",
+"market": "SH",
+"wsym": "sh600584"
+},
+{
+"ticker": "600585",
+"market": "SH",
+"wsym": "sh600585"
+},
+{
+"ticker": "600588",
+"market": "SH",
+"wsym": "sh600588"
+},
+{
+"ticker": "600600",
+"market": "SH",
+"wsym": "sh600600"
+},
+{
+"ticker": "600660",
+"market": "SH",
+"wsym": "sh600660"
+},
+{
+"ticker": "600674",
+"market": "SH",
+"wsym": "sh600674"
+},
+{
+"ticker": "600690",
+"market": "SH",
+"wsym": "sh600690"
+},
+{
+"ticker": "600741",
+"market": "SH",
+"wsym": "sh600741"
+},
+{
+"ticker": "600760",
+"market": "SH",
+"wsym": "sh600760"
+},
+{
+"ticker": "600795",
+"market": "SH",
+"wsym": "sh600795"
+},
+{
+"ticker": "600803",
+"market": "SH",
+"wsym": "sh600803"
+},
+{
+"ticker": "600809",
+"market": "SH",
+"wsym": "sh600809"
+},
+{
+"ticker": "600845",
+"market": "SH",
+"wsym": "sh600845"
+},
+{
+"ticker": "600875",
+"market": "SH",
+"wsym": "sh600875"
+},
+{
+"ticker": "600886",
+"market": "SH",
+"wsym": "sh600886"
+},
+{
+"ticker": "600887",
+"market": "SH",
+"wsym": "sh600887"
+},
+{
+"ticker": "600893",
+"market": "SH",
+"wsym": "sh600893"
+},
+{
+"ticker": "600900",
+"market": "SH",
+"wsym": "sh600900"
+},
+{
+"ticker": "600905",
+"market": "SH",
+"wsym": "sh600905"
+},
+{
+"ticker": "600918",
+"market": "SH",
+"wsym": "sh600918"
+},
+{
+"ticker": "600919",
+"market": "SH",
+"wsym": "sh600919"
+},
+{
+"ticker": "600926",
+"market": "SH",
+"wsym": "sh600926"
+},
+{
+"ticker": "600930",
+"market": "SH",
+"wsym": "sh600930"
+},
+{
+"ticker": "600938",
+"market": "SH",
+"wsym": "sh600938"
+},
+{
+"ticker": "600941",
+"market": "SH",
+"wsym": "sh600941"
+},
+{
+"ticker": "600958",
+"market": "SH",
+"wsym": "sh600958"
+},
+{
+"ticker": "600989",
+"market": "SH",
+"wsym": "sh600989"
+},
+{
+"ticker": "600999",
+"market": "SH",
+"wsym": "sh600999"
+},
+{
+"ticker": "601006",
+"market": "SH",
+"wsym": "sh601006"
+},
+{
+"ticker": "601009",
+"market": "SH",
+"wsym": "sh601009"
+},
+{
+"ticker": "601012",
+"market": "SH",
+"wsym": "sh601012"
+},
+{
+"ticker": "601018",
+"market": "SH",
+"wsym": "sh601018"
+},
+{
+"ticker": "601021",
+"market": "SH",
+"wsym": "sh601021"
+},
+{
+"ticker": "601058",
+"market": "SH",
+"wsym": "sh601058"
+},
+{
+"ticker": "601059",
+"market": "SH",
+"wsym": "sh601059"
+},
+{
+"ticker": "601066",
+"market": "SH",
+"wsym": "sh601066"
+},
+{
+"ticker": "601077",
+"market": "SH",
+"wsym": "sh601077"
+},
+{
+"ticker": "601088",
+"market": "SH",
+"wsym": "sh601088"
+},
+{
+"ticker": "601100",
+"market": "SH",
+"wsym": "sh601100"
+},
+{
+"ticker": "601111",
+"market": "SH",
+"wsym": "sh601111"
+},
+{
+"ticker": "601117",
+"market": "SH",
+"wsym": "sh601117"
+},
+{
+"ticker": "601127",
+"market": "SH",
+"wsym": "sh601127"
+},
+{
+"ticker": "601136",
+"market": "SH",
+"wsym": "sh601136"
+},
+{
+"ticker": "601138",
+"market": "SH",
+"wsym": "sh601138"
+},
+{
+"ticker": "601166",
+"market": "SH",
+"wsym": "sh601166"
+},
+{
+"ticker": "601169",
+"market": "SH",
+"wsym": "sh601169"
+},
+{
+"ticker": "601186",
+"market": "SH",
+"wsym": "sh601186"
+},
+{
+"ticker": "601211",
+"market": "SH",
+"wsym": "sh601211"
+},
+{
+"ticker": "601225",
+"market": "SH",
+"wsym": "sh601225"
+},
+{
+"ticker": "601229",
+"market": "SH",
+"wsym": "sh601229"
+},
+{
+"ticker": "601238",
+"market": "SH",
+"wsym": "sh601238"
+},
+{
+"ticker": "601288",
+"market": "SH",
+"wsym": "sh601288"
+},
+{
+"ticker": "601318",
+"market": "SH",
+"wsym": "sh601318"
+},
+{
+"ticker": "601319",
+"market": "SH",
+"wsym": "sh601319"
+},
+{
+"ticker": "601328",
+"market": "SH",
+"wsym": "sh601328"
+},
+{
+"ticker": "601336",
+"market": "SH",
+"wsym": "sh601336"
+},
+{
+"ticker": "601360",
+"market": "SH",
+"wsym": "sh601360"
+},
+{
+"ticker": "601377",
+"market": "SH",
+"wsym": "sh601377"
+},
+{
+"ticker": "601390",
+"market": "SH",
+"wsym": "sh601390"
+},
+{
+"ticker": "601398",
+"market": "SH",
+"wsym": "sh601398"
+},
+{
+"ticker": "601456",
+"market": "SH",
+"wsym": "sh601456"
+},
+{
+"ticker": "601600",
+"market": "SH",
+"wsym": "sh601600"
+},
+{
+"ticker": "601601",
+"market": "SH",
+"wsym": "sh601601"
+},
+{
+"ticker": "601607",
+"market": "SH",
+"wsym": "sh601607"
+},
+{
+"ticker": "601618",
+"market": "SH",
+"wsym": "sh601618"
+},
+{
+"ticker": "601628",
+"market": "SH",
+"wsym": "sh601628"
+},
+{
+"ticker": "601633",
+"market": "SH",
+"wsym": "sh601633"
+},
+{
+"ticker": "601658",
+"market": "SH",
+"wsym": "sh601658"
+},
+{
+"ticker": "601668",
+"market": "SH",
+"wsym": "sh601668"
+},
+{
+"ticker": "601669",
+"market": "SH",
+"wsym": "sh601669"
+},
+{
+"ticker": "601688",
+"market": "SH",
+"wsym": "sh601688"
+},
+{
+"ticker": "601689",
+"market": "SH",
+"wsym": "sh601689"
+},
+{
+"ticker": "601698",
+"market": "SH",
+"wsym": "sh601698"
+},
+{
+"ticker": "601727",
+"market": "SH",
+"wsym": "sh601727"
+},
+{
+"ticker": "601728",
+"market": "SH",
+"wsym": "sh601728"
+},
+{
+"ticker": "601766",
+"market": "SH",
+"wsym": "sh601766"
+},
+{
+"ticker": "601788",
+"market": "SH",
+"wsym": "sh601788"
+},
+{
+"ticker": "601800",
+"market": "SH",
+"wsym": "sh601800"
+},
+{
+"ticker": "601816",
+"market": "SH",
+"wsym": "sh601816"
+},
+{
+"ticker": "601818",
+"market": "SH",
+"wsym": "sh601818"
+},
+{
+"ticker": "601825",
+"market": "SH",
+"wsym": "sh601825"
+},
+{
+"ticker": "601838",
+"market": "SH",
+"wsym": "sh601838"
+},
+{
+"ticker": "601857",
+"market": "SH",
+"wsym": "sh601857"
+},
+{
+"ticker": "601868",
+"market": "SH",
+"wsym": "sh601868"
+},
+{
+"ticker": "601872",
+"market": "SH",
+"wsym": "sh601872"
+},
+{
+"ticker": "601877",
+"market": "SH",
+"wsym": "sh601877"
+},
+{
+"ticker": "601878",
+"market": "SH",
+"wsym": "sh601878"
+},
+{
+"ticker": "601881",
+"market": "SH",
+"wsym": "sh601881"
+},
+{
+"ticker": "601888",
+"market": "SH",
+"wsym": "sh601888"
+},
+{
+"ticker": "601898",
+"market": "SH",
+"wsym": "sh601898"
+},
+{
+"ticker": "601899",
+"market": "SH",
+"wsym": "sh601899"
+},
+{
+"ticker": "601901",
+"market": "SH",
+"wsym": "sh601901"
+},
+{
+"ticker": "601916",
+"market": "SH",
+"wsym": "sh601916"
+},
+{
+"ticker": "601919",
+"market": "SH",
+"wsym": "sh601919"
+},
+{
+"ticker": "601939",
+"market": "SH",
+"wsym": "sh601939"
+},
+{
+"ticker": "601985",
+"market": "SH",
+"wsym": "sh601985"
+},
+{
+"ticker": "601988",
+"market": "SH",
+"wsym": "sh601988"
+},
+{
+"ticker": "601995",
+"market": "SH",
+"wsym": "sh601995"
+},
+{
+"ticker": "601998",
+"market": "SH",
+"wsym": "sh601998"
+},
+{
+"ticker": "603019",
+"market": "SH",
+"wsym": "sh603019"
+},
+{
+"ticker": "603259",
+"market": "SH",
+"wsym": "sh603259"
+},
+{
+"ticker": "603260",
+"market": "SH",
+"wsym": "sh603260"
+},
+{
+"ticker": "603288",
+"market": "SH",
+"wsym": "sh603288"
+},
+{
+"ticker": "603296",
+"market": "SH",
+"wsym": "sh603296"
+},
+{
+"ticker": "603369",
+"market": "SH",
+"wsym": "sh603369"
+},
+{
+"ticker": "603392",
+"market": "SH",
+"wsym": "sh603392"
+},
+{
+"ticker": "603501",
+"market": "SH",
+"wsym": "sh603501"
+},
+{
+"ticker": "603799",
+"market": "SH",
+"wsym": "sh603799"
+},
+{
+"ticker": "603893",
+"market": "SH",
+"wsym": "sh603893"
+},
+{
+"ticker": "603986",
+"market": "SH",
+"wsym": "sh603986"
+},
+{
+"ticker": "603993",
+"market": "SH",
+"wsym": "sh603993"
+},
+{
+"ticker": "605117",
+"market": "SH",
+"wsym": "sh605117"
+},
+{
+"ticker": "605499",
+"market": "SH",
+"wsym": "sh605499"
+},
+{
+"ticker": "688008",
+"market": "SH",
+"wsym": "sh688008"
+},
+{
+"ticker": "688009",
+"market": "SH",
+"wsym": "sh688009"
+},
+{
+"ticker": "688012",
+"market": "SH",
+"wsym": "sh688012"
+},
+{
+"ticker": "688036",
+"market": "SH",
+"wsym": "sh688036"
+},
+{
+"ticker": "688041",
+"market": "SH",
+"wsym": "sh688041"
+},
+{
+"ticker": "688047",
+"market": "SH",
+"wsym": "sh688047"
+},
+{
+"ticker": "688072",
+"market": "SH",
+"wsym": "sh688072"
+},
+{
+"ticker": "688082",
+"market": "SH",
+"wsym": "sh688082"
+},
+{
+"ticker": "688111",
+"market": "SH",
+"wsym": "sh688111"
+},
+{
+"ticker": "688126",
+"market": "SH",
+"wsym": "sh688126"
+},
+{
+"ticker": "688183",
+"market": "SH",
+"wsym": "sh688183"
+},
+{
+"ticker": "688223",
+"market": "SH",
+"wsym": "sh688223"
+},
+{
+"ticker": "688256",
+"market": "SH",
+"wsym": "sh688256"
+},
+{
+"ticker": "688271",
+"market": "SH",
+"wsym": "sh688271"
+},
+{
+"ticker": "688303",
+"market": "SH",
+"wsym": "sh688303"
+},
+{
+"ticker": "688396",
+"market": "SH",
+"wsym": "sh688396"
+},
+{
+"ticker": "688472",
+"market": "SH",
+"wsym": "sh688472"
+},
+{
+"ticker": "688506",
+"market": "SH",
+"wsym": "sh688506"
+},
+{
+"ticker": "688521",
+"market": "SH",
+"wsym": "sh688521"
+},
+{
+"ticker": "688981",
+"market": "SH",
+"wsym": "sh688981"
+}
+]

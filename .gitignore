@@ -1,0 +1,43 @@
+# ===== Binary / Large Data =====
+*.db
+*.parquet
+*.pkl
+
+# ===== Logs & Temp =====
+_*.txt
+_*.log
+_*.err
+_*.bat
+_frag_*.json
+
+# ===== Data Directory =====
+data/db/
+data/cache/
+data/reports/
+data/factors/
+data/zxjc_fund_flow_*.csv
+
+# ===== Output =====
+output/
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ===== WorkBuddy =====
+.workbuddy/
+
+# ===== Node =====
+node_modules/
