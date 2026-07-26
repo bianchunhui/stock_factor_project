@@ -1,25 +1,28 @@
 # 多因子选股量化系统
 
-A股（沪深京 + 科创/创业板）与港股通多因子选股框架，覆盖 24 个因子（价值/成长/质量/动量/波动/规模/流动性/情绪）。
+跨市场（**A股沪深300 / 港股恒生指数∩港股通 / 美股道琼斯30**）多因子选股框架，覆盖 24 个因子（价值/成长/质量/动量/波动/规模/流动性/情绪）。
+
+数据落地采用 **SQLite 分库**（不再依赖散落 parquet），通过本地 Streamlit 面板实现「补数 + 因子计算 + 选股」一站式操作。
 
 ## 目录结构
 
 ```
 stock_factor_project/
-├── config/                  # 路径、参数、因子目录
+├── config/
 │   ├── settings.py          # 项目根/数据路径/抓取参数
 │   └── universe.py          # 市场过滤参数、基准、FACTOR_CATALOG(24因子)
-├── fetcher/                 # akshare 数据抓取层
+├── fetcher/                 # 数据抓取层（akshare / westock / yfinance）
 │   ├── base.py              # BaseFetcher: 节流/重试/parquet缓存/to_datetime_safe
-│   ├── price.py             # A股/港股/指数日频行情
+│   ├── price.py             # A股/港股/指数日频行情（后复权）
 │   ├── calendar.py          # 交易日历/调仓日
 │   ├── financial.py         # 三大报表(利润/资产负债/现金流) + 衍生指标
 │   ├── hsgt.py              # 沪深港通北向持股（⚠️ 数据截至 2024-08-16）
-│   ├── fund_flow.py         # 东财个股资金流（北向替代, 2024年至今可用）
+│   ├── fund_flow.py         # westock 个股资金流（北向替代, 2024年至今可用）
 │   ├── industry.py          # 申万行业分类映射
-│   └── spot.py              # 东财实时行情（市值/PE/PB）
+│   ├── spot.py              # 实时行情（市值/PE/PB）
+│   └── store/db.py          # SQLite 分库读写（ashare.db / hk.db / us.db）
 ├── universe/                # 选股池构建
-│   └── builder.py           # Universe(A/HK/A_HK): 成分获取 + ST/新股/流动性过滤
+│   └── builder.py           # Universe(A/HK/US): 成分获取 + ST/新股/流动性过滤
 ├── factors/                 # 因子库（24 个）
 │   ├── base.py              # FactorBase: name/category/direction/compute()
 │   ├── value.py             # EP/BP/SP/CFP/DP 价值因子
@@ -33,36 +36,78 @@ stock_factor_project/
 │   ├── align.py             # forward return 计算与对齐
 │   └── pit_align.py         # 财报 PIT 对齐(防未来函数, merge_asof)
 ├── evaluator/               # 因子评估
-│   ├── ic_ir.py             # 横截面 IC/IR (groupby date → spearman)
+│   ├── ic_ir.py             # 横截面 IC/IR (groupby date -> spearman)
 │   └── returns.py           # 分位组合收益/单调性
 ├── portfolio/               # 组合构建
 │   ├── combine.py           # 因子合成 (等权/IC加权/逆方差)
 │   ├── builder.py           # Top-N%选股+加权
 │   └── backtest.py          # 向量化回测引擎
-├── backtest/                 # 指标与成本
+├── backtest/                # 指标与成本
 │   ├── metrics.py           # 年化/夏普/回撤/信息比率
-│   └── costs.py             # A股/港股通交易成本
-├── risk/                     # 风控
+│   └── costs.py             # A股/港股通/美股交易成本
+├── risk/                    # 风控
 │   └── controls.py          # 权重约束/行业暴露
 ├── scripts/
-│   ├── eval_single_factor.py  # 单因子端到端评估脚本
-│   ├── eval_all_factors.py    # 全量24因子端到端评估脚本
-│   ├── fix_cache_dtype.py     # 修复parquet缓存日期dtype
-│   └── verify_pit_merge.py    # 验证PIT对齐正确性
-├── tests/
-│   └── test_fetch.py        # 连通性测试
-└── data/{cache,factors,reports}/  # 自动创建的本地数据目录
+│   ├── streamlit_app.py     # ★ 主面板：三市场补数+因子+选股
+│   ├── _download_a_share.py # A股行情下载（区间参数）
+│   ├── download_hk_data.py  # 港股数据下载
+│   ├── download_us_data.py  # 美股数据下载
+│   ├── run_factor_calc.py   # A股全量因子计算（含资金流 merge）
+│   ├── run_hk_factor_calc.py / run_us_factor_calc.py
+│   ├── select_stocks.py     # A股 IC加权选股
+│   ├── build_composite_hk.py / build_composite_us.py
+│   ├── westock_fetcher.py   # 资金流日更（CLI 逐日区间循环）
+│   ├── backfill_fund_flow_mcp.py  # MCP 历史资金流回补落库
+│   ├── eval_single_factor.py / eval_all_factors.py
+│   └── verify_pit_merge.py  # 验证PIT对齐正确性
+├── tools/westock_cli/       # vendored westock CLI（资金流日更，token 内置）
+├── tests/test_fetch.py      # 连通性测试
+├── data/
+│   ├── db/{ashare,hk,us}.db # ★ SQLite 主存储（已 gitignore，本地生成）
+│   ├── cache/               # 原始数据 parquet 缓存（中间层）
+│   ├── factors/             # 因子结果 parquet
+│   └── reports/             # 选股/回测 HTML+CSV 报告
+├── start_dashboard.ps1      # 启动 Streamlit 面板（端口 8501）
+├── stop_dashboard.ps1       # 停止面板
+└── run_ashare.bat / run_hk.bat / run_us.bat  # 纯命令行一键跑全流程
 ```
 
 ## 快速开始
 
-```bash
+### 方式一：Streamlit 面板（推荐）
+
+```powershell
+# 1. 安装依赖
 pip install -r requirements.txt
+
+# 2. 启动面板（默认 http://localhost:8501）
+.\start_dashboard.ps1
+# 停止：.\stop_dashboard.ps1
+```
+
+面板三个 Tab（A股 / 港股 / 美股），每个 Tab 两块：
+
+1. **数据覆盖区间 + 补数（含因子计算）**
+   - 填开始/结束日期 → 点「⚡ 补数 + 因子计算」
+   - 自动跑：行情下载 → 资金流增量(westock CLI) → 全量因子重算
+2. **执行选股（IC加权）+ 结果展示**
+   - 输出最新持仓 CSV/HTML 到 `data/reports/`
+
+### 方式二：纯命令行一键跑
+
+```bash
+# A股完整流程：下载行情/财务 -> 24因子 -> IC加权合成 -> 月度调仓回测 -> 输出持仓
+run_ashare.bat
+# 港股 / 美股 同理：run_hk.bat / run_us.bat
+```
+
+### 方式三：分步调试 / 因子评估
+
+```bash
 python tests/test_fetch.py                    # 连通性测试
 python scripts/eval_single_factor.py          # 单因子评估(默认Vol60)
 python scripts/eval_single_factor.py --factor Mom12m --index 000905 --max-stocks 100
-python scripts/eval_all_factors.py            # 全量24因子评估(默认5股)
-python scripts/eval_all_factors.py --max-stocks 50 --start 20230101
+python scripts/eval_all_factors.py            # 全量24因子评估
 ```
 
 ## 因子目录（24 个）
@@ -83,63 +128,70 @@ python scripts/eval_all_factors.py --max-stocks 50 --start 20230101
 
 ## 数据源说明
 
-### 行情数据
+### 行情 / 财务（akshare）
 
-A 股日频行情（后复权）通过 `PriceFetcher` 获取，支持沪深京主板/科创/创业/北交所。基准指数行情同接口。实时行情（市值/PE/PB）通过 `SpotFetcher` 获取并按 (date, ticker) 合并到 panel。
+A 股日频行情（后复权）、基准指数行情、实时行情（市值/PE/PB）通过 akshare 获取。
+财报数据（`FinancialFetcher`）通过东方财富 EM 三大报表接口获取利润表/资产负债表/现金流量表，衍生计算 ROE/ROA/毛利率/资产负债率等指标，并按 `announcement_date` 做 **Point-in-Time 对齐**，防止未来函数。
 
-### 财报数据（PIT 对齐）
+⚠️ **重要**：AKShare EM 接口返回的 `REPORT_DATE` / `NOTICE_DATE` 是 epoch 微秒（int64），`pd.to_datetime()` 不带 `unit` 参数会默认按纳秒解析导致日期被误译为 1970 年。项目使用 `to_datetime_safe()` 函数（`fetcher/base.py`）自动识别数值单位。
 
-`FinancialFetcher` 通过东方财富 EM 三大报表接口获取利润表/资产负债表/现金流量表，衍生计算 ROE/ROA/毛利率/资产负债率等指标。财报数据通过 `pit_merge` 按 `announcement_date` 做 Point-in-Time 对齐，确保每个交易日只能使用已公告的最新财报，防止未来函数。
+### 北向资金（⚠️ 2014-11-17 ~ 2024-08-16，已停更）
 
-⚠️ **重要**：AKShare EM 接口返回的 `REPORT_DATE` / `NOTICE_DATE` 是 epoch 微秒（int64），`pd.to_datetime()` 不带 `unit` 参数会默认按纳秒解析导致日期被误译为 1970 年。项目使用 `to_datetime_safe()` 函数（`fetcher/base.py`）自动识别数值单位，所有日期转换均通过该函数处理。
+港交所于 2024-08-16 起停止披露沪深股通个股级实时数据。基于北向资金的 3 个情绪因子（HSGT/Flow/FUp）**仅适用于历史回测**，不可用于实时选股。
 
-### 北向资金（⚠️ 2014-11-17 ~ 2024-08-16）
+### 个股资金流（北向替代, 2024 年至今）— westock 双路
 
-港交所于 2024-08-16 起停止披露沪深股通个股级实时数据。`HSGTFetcher` 的 `stock_hsgt_individual_em` 接口数据**不再更新**，日期范围仅至 2024-08-16。
+2026-07 重构，**彻底弃用东财个股资金流接口**，改用腾讯自选股 westock：
 
-基于北向资金的 3 个情绪因子（HSGT/Flow/FUp）**仅适用于历史回测**（2014-11 ~ 2024-08），不可用于 2024 年 8 月之后的实时选股。
+- **历史回补**：MCP `data_fund_flow(start, end)` 批量回填空历史 → `backfill_fund_flow_mcp.py` 落 SQLite（一次性）。
+- **日更增量**：vendored westock CLI（`tools/westock_cli/scripts/index.js asfund`）逐日 append 当日快照，走类似行情的增量更新方式，由面板「补数」按钮或 `westock_fetcher.py` 触发。
 
-### 个股资金流（北向替代, 2024 年至今）
+字段映射（westock -> db 列，单位均为「元」）：
+`MainNetFlow→main_net_inflow`、`JumboNetFlow→super_big_net_inflow`、`BlockNetFlow→big_net_inflow`、`MidNetFlow→mid_net_inflow`、`SmallNetFlow→small_net_inflow`。
 
-`FundFlowFetcher` 通过东财 `stock_individual_fund_flow` 接口获取个股资金流数据，提供主力/超大单/大单/中单/小单净流入，作为北向资金停止后的现代情绪因子数据源。
+### 港股 / 美股
 
-基于资金流的 2 个情绪因子（MainFlow/SuperBig）覆盖 2024 年至今，是与北向因子互补的现代数据源。在 `eval_all_factors.py` 中两套数据源同时拉取并合并到 panel：历史段用北向因子，现代段用资金流因子。
+- 港股：恒生指数成分 ∩ 港股通标的，行情/财务经 `download_hk_data.py` 落 `hk.db`。
+- 美股：道琼斯 30 成分，行情经 `download_us_data.py`（yfinance）落 `us.db`。
 
 ### 行业分类
 
 `IndustryFetcher` 获取申万一级行业分类，用于横截面行业中性化。
 
+## 存储（SQLite 分库）
+
+三市场各自独立数据库，置于 `data/db/`（**已加入 .gitignore，不入库**）：
+
+| 库 | 市场 |
+|----|------|
+| `ashare.db` | A股（沪深300） |
+| `hk.db` | 港股 |
+| `us.db` | 美股 |
+
+核心表：`daily_price`（日频行情）、`fund_flow`（资金流，westock）、`financial_income/balance/cashflow/indicator`（财报）、`factor_panel`（24 因子原始值+标准化值）、`ref_*`（`ref_universe`/`ref_index_weight`/`ref_industry_map`/`ref_shares` 等参考表）。
+
+因子计算（`run_factor_calc.py`）读取全量行情+全量资金流，对所有历史日期 **全量重算** 并 upsert 覆盖 `factor_panel`——即使只补两天增量，也是整段历史重算。
+
 ## 核心链路
 
 ```
-原始数据 → Universe(去ST/新股/停牌/低流动)
-  → 财报PIT合并 + 北向/资金流合并 + spot行情合并
+原始数据(akshare/westock/yfinance) → SQLite 分库
+  → Universe(去ST/新股/停牌/低流动)
+  → 财报PIT合并 + 资金流(westock)合并 + spot行情合并
   → 因子 compute() → 横截面缩尾+行业/市值中性化 → 截面z-score
   → forward return(t+1持有→t+N平仓) → 对齐
   → 横截面IC/IR评估 → 分位组合单调性
   → 多因子IC加权合成 → Top-N%选股 → 月度调仓回测
 ```
 
-## 验证结果
-
-### 单因子（4 股 × Vol60）
-
-| 持有期 | IC均值 | IR | 胜率 |
-|--------|--------|-----|------|
-| 1日 | -0.011 | -0.02 | 43.5% |
-| 5日 | -0.042 | -0.07 | 41.9% |
-| **21日** | **+0.043** | **0.07** | **46.6%** |
-
-### 全量 24 因子（5 股 × 沪深 300, 2023-01 至今）
-
-财报因子（RevG/NetG/EpG/ROE/ROA/GPM/Lev）经 PIT 对齐后正常切换报告期，不再出现全 panel 常数填充问题。情绪因子双源设计：历史段北向 + 现代段资金流。
-
 ## 项目进度
 
-- [x] **Phase 1-3E**: 项目骨架 + 22 因子库 + fetcher + 处理器
-- [x] **Phase 3Ga**: fetcher/spot.py + fetcher/fund_flow.py + 情绪因子双源化
-- [x] **Phase 3Gb**: 修复 PIT merge dtype bug（epoch 微秒→datetime64）+ 整合资金流到脚本 + 重跑
-- [x] **Phase 3I**: 更新 README + FACTOR_CATALOG，明确北向数据可用区间与替代方案
-- [ ] **Phase 4**: 完整 24 因子组合 + 沪深 300 全量回测
-- [ ] **Phase 5**: 港股通 universe + 汇率处理
-- [ ] **Phase 6**: HTML 报告输出
+- [x] 项目骨架 + 24 因子库 + fetcher + 处理器
+- [x] 情绪因子双源化（北向历史 + 资金流现代）
+- [x] 财报 PIT 对齐 dtype 修复（epoch 微秒→datetime64）
+- [x] 资金流数据源重构：弃东财 → westock（MCP 历史 + CLI 日更）
+- [x] SQLite 分库存储（替代散落 parquet）
+- [x] 港股通 / 美股（道指）universe + 因子计算 + 选股
+- [x] Streamlit 三市场面板（补数+因子+选股一站式）
+- [x] HTML 报告输出
+```
